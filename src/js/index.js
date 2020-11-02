@@ -1,3 +1,3 @@
-const sayHello = () => alert("Hello, it's Artsource")
+const sayHello = () => console.log("Hello, it's Artsource")
 
 sayHello()
