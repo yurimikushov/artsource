@@ -1,4 +1,5 @@
 const { src, dest } = require('gulp')
+const cleanDir = require('gulp-clean-dir')
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
 const shorthand = require('gulp-shorthand')
@@ -7,6 +8,7 @@ const sourcemaps = require('gulp-sourcemaps')
 
 module.exports = function buildCss() {
   return src('src/scss/*.scss')
+    .pipe(cleanDir('build/css'))
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
