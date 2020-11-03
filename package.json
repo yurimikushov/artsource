@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
-    "start": "gulp start"
+    "start": "npm run build && gulp start"
   },
   "repository": {
     "type": "git",
