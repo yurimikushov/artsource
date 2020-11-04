@@ -2,7 +2,7 @@
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  height: 60px;
+  height: 55px;
   width: 100%;
   max-width: 1400px;
   z-index: 100;
@@ -137,4 +137,13 @@
       transform: rotate(45deg) translateY(-7px);
     }
   }
+}
+
+.menu-background {
+  position: fixed;
+  height: 55px;
+  width: 100%;
+  background-color: #1b1a1a;
+  z-index: 1;
+  opacity: 0;
 }
