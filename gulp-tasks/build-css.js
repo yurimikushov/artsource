@@ -12,7 +12,7 @@ module.exports = function buildCss() {
     .pipe(cleanDir('build/css'))
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(concat('main.css'))
+    .pipe(concat('main.min.css'))
     .pipe(autoprefixer())
     .pipe(shorthand())
     .pipe(minify())
