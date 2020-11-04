@@ -27,6 +27,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-clean-dir": "^1.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
     "gulp-html-bem-validator": "^1.0.5",
     "gulp-minify": "^3.1.0",
