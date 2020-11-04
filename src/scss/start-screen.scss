@@ -28,11 +28,13 @@
       text-transform: uppercase;
       font-family: 'Roboto', sans-serif;
 
-      & li i {
-        margin: 0 20px;
+      & li svg {
         margin-top: 40px;
-        color: #00ff54;
-        font-size: 25px;
+        margin-left: 20px;
+        margin-right: 20px;
+        fill: #00ff54;
+        height: 25px;
+        width: 25px;
       }
     }
 
@@ -45,12 +47,12 @@
       & ul {
         font-size: 18px;
 
-        & li i {
-          margin-top: 22px;
-          font-size: 23px;
+        & li svg {
+          margin-top: 25px;
+          height: 23px;
+          width: 23px;
         }
       }
-
     }
 
     @media screen and (max-width: 960px) {
@@ -62,9 +64,10 @@
       & ul {
         font-size: 15px;
 
-        & li i {
+        & li svg {
           margin-top: 20px;
-          font-size: 20px;
+          height: 20px;
+          width: 20px;
         }
       }
     }
@@ -78,7 +81,7 @@
         display: block;
         font-size: 20px;
 
-        & li i {
+        & li svg {
           margin: 15px 0;
         }
       }
