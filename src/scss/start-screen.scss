@@ -13,74 +13,74 @@
         transform: translate(-50%, -50%);
         width: 100%;
         text-align: center;
-    }
 
-    & .container img {
-        height: 145px;
-        margin-bottom: 75px;
-    }
-
-    & .container ul {
-        display: inline-flex;
-        list-style: none;
-        font-size: 20px;
-        line-height: 1.4;
-        color: #fff;
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    & .container ul li i {
-        margin: 0 20px;
-        margin-top: 23px;
-        color: #00ff54;
-        font-size: 25px;
-    }
-
-    @media screen and (max-width: 1400px) {
-        & .container img {
-            height: 100px;
-            margin-bottom: 50px;
+        & img {
+            height: 145px;
+            margin-bottom: 75px;
         }
 
-        & .container ul {
-            font-size: 18px;
+        & ul {
+            display: inline-flex;
+            list-style: none;
+            font-size: 25px;
+            line-height: 1.4;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+
+            & li i {
+                margin: 0 20px;
+                margin-top: 23px;
+                color: #00ff54;
+                font-size: 25px;
+            }
         }
 
-        & .container ul li i {
-            margin-top: 22px;
-            font-size: 23px;
+        @media screen and (max-width: 1400px) {
+            & img {
+                height: 100px;
+                margin-bottom: 50px;
+            }
+    
+            & ul {
+                font-size: 18px;
+            }
+    
+            & ul li i {
+                margin-top: 22px;
+                font-size: 23px;
+            }
         }
-    }
-
-    @media screen and (max-width: 960px) {
-        & .container img {
-            height: 70px;
-            margin-bottom: 40px;
+    
+        @media screen and (max-width: 960px) {
+            & img {
+                height: 70px;
+                margin-bottom: 40px;
+            }
+    
+            & ul {
+                font-size: 15px;
+            }
+    
+            & ul li i {
+                margin-top: 20px;
+                font-size: 20px;
+            }
         }
-
-        & .container ul {
-            font-size: 15px;
-        }
-
-        & .container ul li i {
-            margin-top: 20px;
-            font-size: 20px;
-        }
-    }
-
-    @media screen and (max-width: 820px) {
-        & .container img {
-            display: none;
-        }
-
-        & .container ul {
-            display: block;
-            font-size: 20px;
-        }
-
-        & .container ul li i {
-            margin: 15px 0;
+    
+        @media screen and (max-width: 820px) {
+            & img {
+                display: none;
+            }
+    
+            & ul {
+                display: block;
+                font-size: 20px;
+            }
+    
+            & ul li i {
+                margin: 15px 0;
+            }
         }
     }
 }
