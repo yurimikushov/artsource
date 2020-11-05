@@ -1,4 +1,10 @@
 include section-title-mixin.pug
+include portfolio-item-mixin.pug
 
 .portfolio
     +section-title('Портфолио')
+    .container
+        +portfolio-item('item1', 'https://www.instagram.com/p/B4kVR5Wgb5l/', 'images/magazine.png', 'Разработка фирменного каталога продукции')
+        +portfolio-item('item2', 'https://www.instagram.com/p/Bxmrn9ZnHFf/', 'images/visit.png', 'Разработка дизайн визитки')
+        +portfolio-item('item3', 'https://www.instagram.com/p/BwrlssnAGz3/', 'images/logLHC.png', 'Прототипирование и разработка логотипа. Брендинг')
+        +portfolio-item('item4', 'https://www.instagram.com/p/B2jESoIA6a8/', 'images/lis.png', 'Разработка раздаточного флаера')
