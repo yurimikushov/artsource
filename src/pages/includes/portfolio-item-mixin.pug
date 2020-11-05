@@ -1,7 +1,7 @@
 mixin portfolio-item(className, linkToInstagram, src, discription)
   .portfolio-item(class=className)
     a(href=linkToInstagram target='_blank')
-        img(src=src)
+        img(src=src alt=discription)
         .discription-container
             .discription
                 p
