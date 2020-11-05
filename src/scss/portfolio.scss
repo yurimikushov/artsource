@@ -1,0 +1,71 @@
+.portfolio .container {
+  margin: auto;
+  max-width: 1500px;
+  display: grid;
+  grid-gap: 30px;
+  grid-auto-rows: 140px;
+  grid-auto-columns: 140px;
+  justify-content: center;
+
+  @media screen and (max-width: 1350px) {
+    grid-gap: 25px;
+    grid-auto-rows: 120px;
+    grid-auto-columns: 120px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-gap: 20px;
+    grid-auto-rows: 400px;
+    grid-auto-columns: 400px;
+  }
+
+  @media screen and (max-width: 450px) {
+    grid-auto-rows: 300px;
+    grid-auto-columns: 300px;
+  }
+
+  @media screen and (max-width: 400px) {
+    grid-auto-rows: 250px;
+    grid-auto-columns: 250px;
+  }
+
+  @media screen and (max-width: 350px) {
+    grid-auto-rows: 200px;
+    grid-auto-columns: 200px;
+  }
+}
+
+@mixin displayItems($rowCount, $colCount, $itemSize) {
+  $grid-row: 1;
+  $item-count: 1;
+
+  @for $row from 1 through $rowCount {
+    $grid-column: 1;
+
+    @for $col from 1 through $colCount {
+      .item-#{$item-count} {
+        justify-self: center;
+        grid-column: #{$grid-column} / #{$grid-column + $itemSize};
+        grid-row: #{$grid-row}/ #{$grid-row + $itemSize};
+      }
+      $grid-column: $grid-column + $itemSize;
+      $item-count: $item-count + 1;
+    }
+
+    $grid-row: $grid-row + $itemSize;
+  }
+}
+
+@include displayItems(4, 4, 2);
+
+@media screen and (max-width: 1160px) {
+  @include displayItems(6, 3, 2);
+}
+
+@media screen and (max-width: 900px) {
+  @include displayItems(8, 2, 2);
+}
+
+@media (max-width: 768px) {
+  @include displayItems(16, 1, 1);
+}
