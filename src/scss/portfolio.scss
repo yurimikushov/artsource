@@ -1,37 +1,41 @@
-.portfolio .container {
-  margin: auto;
-  max-width: 1500px;
-  display: grid;
-  grid-gap: 30px;
-  grid-auto-rows: 140px;
-  grid-auto-columns: 140px;
-  justify-content: center;
+.portfolio {
+  background: #f4f4f4;
+  
+  .container {
+    margin: auto;
+    max-width: 1500px;
+    display: grid;
+    grid-gap: 30px;
+    grid-auto-rows: 140px;
+    grid-auto-columns: 140px;
+    justify-content: center;
 
-  @media screen and (max-width: 1350px) {
-    grid-gap: 25px;
-    grid-auto-rows: 120px;
-    grid-auto-columns: 120px;
-  }
+    @media screen and (max-width: 1350px) {
+      grid-gap: 25px;
+      grid-auto-rows: 120px;
+      grid-auto-columns: 120px;
+    }
 
-  @media screen and (max-width: 768px) {
-    grid-gap: 20px;
-    grid-auto-rows: 400px;
-    grid-auto-columns: 400px;
-  }
+    @media screen and (max-width: 768px) {
+      grid-gap: 20px;
+      grid-auto-rows: 400px;
+      grid-auto-columns: 400px;
+    }
 
-  @media screen and (max-width: 450px) {
-    grid-auto-rows: 300px;
-    grid-auto-columns: 300px;
-  }
+    @media screen and (max-width: 450px) {
+      grid-auto-rows: 300px;
+      grid-auto-columns: 300px;
+    }
 
-  @media screen and (max-width: 400px) {
-    grid-auto-rows: 250px;
-    grid-auto-columns: 250px;
-  }
+    @media screen and (max-width: 400px) {
+      grid-auto-rows: 250px;
+      grid-auto-columns: 250px;
+    }
 
-  @media screen and (max-width: 350px) {
-    grid-auto-rows: 200px;
-    grid-auto-columns: 200px;
+    @media screen and (max-width: 350px) {
+      grid-auto-rows: 200px;
+      grid-auto-columns: 200px;
+    }
   }
 }
 
