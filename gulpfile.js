@@ -15,7 +15,7 @@ module.exports.start = () => {
   })
 
   watch(
-    'src/pages/**/*.pug',
+    ['src/pages/**/*.pug', 'src/data/*'],
     series(buildHtml, (callback) =>
       src('build').pipe(server.stream()).on('end', callback)
     )
