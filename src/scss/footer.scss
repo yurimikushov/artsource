@@ -1,0 +1,40 @@
+footer {
+  background: #0e0e0e;
+
+  & .container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+
+    & .contacts {
+      display: inline-flex;
+      list-style: none;
+
+      & a {
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: 0.2s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    & .logo {
+      padding: 30px 0;
+      font-family: 'Ubuntu', serif;
+      font-size: 35px;
+      letter-spacing: 5px;
+      color: #00ff54;
+    }
+
+    & .copyright {
+      font-family: 'Roboto', serif;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}
