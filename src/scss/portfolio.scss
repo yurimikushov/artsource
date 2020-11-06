@@ -47,7 +47,7 @@
     $grid-column: 1;
 
     @for $col from 1 through $colCount {
-      .item-#{$item-count} {
+      .portfolio-item-#{$item-count} {
         justify-self: center;
         grid-column: #{$grid-column} / #{$grid-column + $itemSize};
         grid-row: #{$grid-row}/ #{$grid-row + $itemSize};
