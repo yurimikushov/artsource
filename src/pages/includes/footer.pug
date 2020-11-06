@@ -1,1 +1,8 @@
-footer It's footer
+footer
+    .container
+        ul.contacts
+            each item in footer
+                a(href=item.href target="_blank")
+                    li=item.icon
+        div.logo ARTSOURCE
+        div.copyright © Copyright 2020. Все права защищены.
