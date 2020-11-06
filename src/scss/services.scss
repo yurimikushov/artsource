@@ -1,0 +1,54 @@
+.services {
+  background: #fff;
+
+  .container {
+    margin: auto;
+    margin-top: 20px;
+    max-width: 1500px;
+    display: grid;
+    grid-gap: 40px;
+    grid-auto-rows: 150px;
+    grid-auto-columns: 150px;
+    justify-content: center;
+    font-size: 18px;
+
+    @media (max-width: 768px) {
+      grid-gap: 20px;
+    }
+
+    @media (max-width: 300px) {
+      font-size: 14px;
+    }
+  }
+}
+
+@mixin displayItems($rowCount, $colCount, $itemSize) {
+  $grid-row: 1;
+  $item-count: 1;
+
+  @for $row from 1 through $rowCount {
+    $grid-column: 1;
+
+    @for $col from 1 through $colCount {
+      .services-item-#{$item-count} {
+        justify-self: center;
+        grid-column: #{$grid-column} / #{$grid-column + $itemSize};
+        grid-row: #{$grid-row}/ #{$grid-row + $itemSize};
+      }
+      $grid-column: $grid-column + $itemSize;
+      $item-count: $item-count + 1;
+    }
+
+    $grid-row: $grid-row + $itemSize;
+  }
+}
+
+@include displayItems(3, 3, 2);
+
+@media screen and (max-width: 1100px) {
+  @include displayItems(5, 2, 2);
+}
+
+@media (max-width: 768px) {
+  @include displayItems(6, 1, 2);
+}

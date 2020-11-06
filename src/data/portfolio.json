@@ -1,84 +1,82 @@
-{
-  "portfolio": [
-    {
-      "linkToInstagram": "https://www.instagram.com/p/B4kVR5Wgb5l/",
-      "image": "images/portfolio/magazine.png",
-      "discription": "Разработка фирменного каталога продукции"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/Bxmrn9ZnHFf/",
-      "image": "images/portfolio/visit.png",
-      "discription": "Разработка дизайн визитки"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/BwrlssnAGz3/",
-      "image": "images/portfolio/logo-lhc.png",
-      "discription": "Прототипирование и разработка логотипа. Брендинг"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/B2jESoIA6a8/",
-      "image": "images/portfolio/lis.png",
-      "discription": "Разработка раздаточного флаера"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/BpM9lAHF0IS/",
-      "image": "images/portfolio/logo-dodydog.png",
-      "discription": "Разработка логотипа"
-    },
-    {
-      "linkToInstagram": "",
-      "image": "images/portfolio/logo-owl.png",
-      "discription": "Отрисовка иллюстрации"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/BtdbR_ZAgID/",
-      "image": "images/portfolio/logo-vrm-group.png",
-      "discription": "Разработка логотипа для группы компаний"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/B1YTwSogW2G/",
-      "image": "images/portfolio/notebook.png",
-      "discription": "Дизайн макет блокнота"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/Br28QswHF8a/",
-      "image": "images/portfolio/akademika-baner.png",
-      "discription": "Разработка макета на билборды"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/B4xL3GZgg-N/",
-      "image": "images/portfolio/preview.png",
-      "discription": "Индивидуальный дизайн макет визиток"
-    },
-    {
-      "linkToInstagram": "",
-      "image": "images/portfolio/booklet-gelpolish.png",
-      "discription": "Разработка евробуклета"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/B5kbQiiAOQ8/",
-      "image": "images/portfolio/logo-wall.png",
-      "discription": "Разработка фирменного стиля"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/Bt0fnNMgbWQ/",
-      "image": "images/portfolio/sport-club-akademica.png",
-      "discription": "Баннер на сайт"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/BtLk-TbA2Yd/",
-      "image": "images/portfolio/kofe.png",
-      "discription": "Концепт бумажных стаканчиков"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/B4Ro85Bg5jQ/",
-      "image": "images/portfolio/logo-indian.png",
-      "discription": "Прототип логотипа"
-    },
-    {
-      "linkToInstagram": "https://www.instagram.com/p/B1N9z-gAWqM/",
-      "image": "images/portfolio/table-tent-card.png",
-      "discription": "Тейбл тент для кафе и ресторанов"
-    }
-  ]
-}
+[
+  {
+    "linkToInstagram": "https://www.instagram.com/p/B4kVR5Wgb5l/",
+    "image": "images/portfolio/magazine.png",
+    "discription": "Разработка фирменного каталога продукции"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/Bxmrn9ZnHFf/",
+    "image": "images/portfolio/visit.png",
+    "discription": "Разработка дизайн визитки"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/BwrlssnAGz3/",
+    "image": "images/portfolio/logo-lhc.png",
+    "discription": "Прототипирование и разработка логотипа. Брендинг"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/B2jESoIA6a8/",
+    "image": "images/portfolio/lis.png",
+    "discription": "Разработка раздаточного флаера"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/BpM9lAHF0IS/",
+    "image": "images/portfolio/logo-dodydog.png",
+    "discription": "Разработка логотипа"
+  },
+  {
+    "linkToInstagram": "",
+    "image": "images/portfolio/logo-owl.png",
+    "discription": "Отрисовка иллюстрации"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/BtdbR_ZAgID/",
+    "image": "images/portfolio/logo-vrm-group.png",
+    "discription": "Разработка логотипа для группы компаний"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/B1YTwSogW2G/",
+    "image": "images/portfolio/notebook.png",
+    "discription": "Дизайн макет блокнота"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/Br28QswHF8a/",
+    "image": "images/portfolio/akademika-baner.png",
+    "discription": "Разработка макета на билборды"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/B4xL3GZgg-N/",
+    "image": "images/portfolio/preview.png",
+    "discription": "Индивидуальный дизайн визиток"
+  },
+  {
+    "linkToInstagram": "",
+    "image": "images/portfolio/booklet-gelpolish.png",
+    "discription": "Разработка евробуклета"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/B5kbQiiAOQ8/",
+    "image": "images/portfolio/logo-wall.png",
+    "discription": "Разработка фирменного стиля"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/Bt0fnNMgbWQ/",
+    "image": "images/portfolio/sport-club-akademica.png",
+    "discription": "Баннер на сайт"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/BtLk-TbA2Yd/",
+    "image": "images/portfolio/kofe.png",
+    "discription": "Концепт бумажных стаканчиков"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/B4Ro85Bg5jQ/",
+    "image": "images/portfolio/logo-indian.png",
+    "discription": "Прототип логотипа"
+  },
+  {
+    "linkToInstagram": "https://www.instagram.com/p/B1N9z-gAWqM/",
+    "image": "images/portfolio/table-tent-card.png",
+    "discription": "Тейбл тент для кафе и ресторанов"
+  }
+]
