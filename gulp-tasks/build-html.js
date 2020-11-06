@@ -3,7 +3,7 @@ const cleanDir = require('gulp-clean-dir')
 const pug = require('gulp-pug')
 const htmlValidator = require('gulp-w3c-html-validator')
 const gulpHtmlBemValidator = require('gulp-html-bem-validator')
-const porfolio = require('./../src/data/portfolio.json')
+const data = require('./../src/data')
 
 module.exports = function buildHtml() {
   return src('src/pages/*.pug')
@@ -14,7 +14,7 @@ module.exports = function buildHtml() {
     )
     .pipe(
       pug({
-        data: porfolio,
+        data: data,
       })
     )
     .pipe(htmlValidator())
