@@ -2,7 +2,8 @@ footer
     .container
         ul.contacts
             each item in footer
-                a(href=item.href target="_blank")
-                    li=item.icon
+                li
+                    a(href=item.href target="_blank") 
+                        img(src=item.image)
         div.logo ARTSOURCE
         div.copyright © Copyright 2020. Все права защищены.
