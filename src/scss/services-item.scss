@@ -1,0 +1,22 @@
+.services-item {
+  text-align: center;
+
+  & img {
+    width: 120px;
+  }
+
+  & .title {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-bottom: 25px;
+    font-family: 'Ubuntu', serif;
+    font-size: 30px;
+  }
+
+  & .discription {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+  }
+}

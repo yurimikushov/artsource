@@ -1,0 +1,7 @@
+mixin services-item(className, image, title, discription)
+  .services-item(class=className)
+    img(src=image)
+    p.title=title
+    .discription
+        each item in discription
+            p #{item}
