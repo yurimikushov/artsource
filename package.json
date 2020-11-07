@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yurimikushov/art-source.git"
+    "url": "git+https://github.com/yurimikushov/artsource.git"
   },
   "author": "Yuri Mikushov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yurimikushov/art-source/issues"
+    "url": "https://github.com/yurimikushov/artsource/issues"
   },
-  "homepage": "https://github.com/yurimikushov/art-source#readme",
+  "homepage": "https://github.com/yurimikushov/artsource#readme",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
