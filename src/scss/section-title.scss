@@ -3,7 +3,7 @@
   text-align: center;
   font-family: 'Ubuntu', serif;
   font-size: 42px;
-  color: #000;
+  color: var(--section-title-color);
 
   @media screen and (max-width: 900px) {
     padding: 40px 0;

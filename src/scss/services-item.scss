@@ -9,16 +9,21 @@
     margin: 12px 5px 25px 5px;
     font-family: 'Ubuntu', serif;
     font-size: 1.6em;
+    color: var(--services-text-color);
 
     @media (max-width: 300px) {
       max-width: 250px;
     }
   }
 
-  & .discription p {
-    max-width: 350px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    line-height: 1.55;
+  & .discription {
+    color: var(--services-text-color);
+
+    p {
+      max-width: 350px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1em;
+      line-height: 1.55;
+    }
   }
 }
