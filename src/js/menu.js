@@ -29,7 +29,8 @@ window.addEventListener('scroll', function () {
 })
 
 function setOpacityToMenuBg() {
-  const opacity = pageYOffset / (portfolioStartAt() - menuBackgroundHeight())
+  const opacity =
+    pageYOffset / (portfolioStartPosition() - menuBackgroundHeight())
 
   document.querySelector('.menu-background').style.opacity = opacity
 }
@@ -50,7 +51,7 @@ document.querySelector('#to-start').addEventListener('click', () => {
 const scrollToContentBtn = document.querySelector('.scroll-to-portfolio-btn')
 
 scrollToContentBtn.addEventListener('click', () => {
-  smoothScrollTo(portfolioStartAt())
+  smoothScrollTo(portfolioStartPosition())
   closeSmallScreenMenu()
 })
 
@@ -62,34 +63,38 @@ function smoothScrollTo(top) {
 }
 
 document.querySelector('#to-portfolio').addEventListener('click', () => {
-  smoothScrollTo(portfolioStartAt())
+  smoothScrollTo(portfolioStartPosition())
   closeSmallScreenMenu()
 })
 
 // Scroll to services
 
 document.querySelector('#to-services').addEventListener('click', () => {
-  smoothScrollTo(servicesStartAt())
+  smoothScrollTo(servicesStartPosition())
   closeSmallScreenMenu()
 })
 
 // Scroll to contact
 
 document.querySelector('#to-footer').addEventListener('click', () => {
-  smoothScrollTo(footerStartAt())
+  smoothScrollTo(footerStartPosition())
   closeSmallScreenMenu()
 })
 
 // Calculate blocks start positions
 
-function portfolioStartAt() {
-  return document.querySelector('#start-screen').offsetHeight
+function portfolioStartPosition() {
+  return document.querySelector('.start-screen').offsetHeight
 }
 
-function servicesStartAt() {
-  return portfolioStartAt() + document.querySelector('#portfolio').offsetHeight
+function servicesStartPosition() {
+  return (
+    portfolioStartPosition() + document.querySelector('.portfolio').offsetHeight
+  )
 }
 
-function footerStartAt() {
-  return servicesStartAt() + document.querySelector('#services').offsetHeight
+function footerStartPosition() {
+  return (
+    servicesStartPosition() + document.querySelector('.services').offsetHeight
+  )
 }

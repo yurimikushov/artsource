@@ -1,6 +1,6 @@
 mixin services-item(className, image, title, discription)
   .services-item(class=className)
-    img(src=image)
+    img(src=image alt=title)
     p.title=title
     .discription
         each item in discription
