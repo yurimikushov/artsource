@@ -28,13 +28,13 @@ module.exports.start = () => {
   )
   watch(
     'src/scss/**/*.scss',
-    series(buildCss, (callback) =>
+    series(buildCss, buildHtml, (callback) =>
       src('build/css').pipe(server.stream()).on('end', callback)
     )
   )
   watch(
     'src/js/**/*.js',
-    series(buildJs, (callback) =>
+    series(buildJs, buildHtml, (callback) =>
       src('build/js').pipe(server.stream()).on('end', callback)
     )
   )
