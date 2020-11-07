@@ -1,11 +1,11 @@
-const { parallel, series, watch, src } = require('gulp')
+const { series, watch, src } = require('gulp')
 const buildHtml = require('./gulp-tasks/build-html')
 const buildImg = require('./gulp-tasks/build-img')
 const buildCss = require('./gulp-tasks/build-css')
 const buildJs = require('./gulp-tasks/build-js')
 const server = require('browser-sync').create()
 
-module.exports.build = parallel(buildHtml, buildImg, buildCss, buildJs)
+module.exports.build = series(buildImg, buildCss, buildJs, buildHtml)
 
 module.exports.start = () => {
   server.init({
