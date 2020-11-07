@@ -16,10 +16,10 @@
     letter-spacing: 5px;
     font-family: 'Ubuntu', serif;
     font-size: 30px;
-    color: #fff;
+    color: var(--menu-item-color);
 
     &:hover {
-      color: #fff;
+      color: var(--menu-item-color);
     }
   }
 
@@ -39,12 +39,12 @@
           border: none;
           outline: none;
           background: transparent;
-          color: #fff;
+          color: var(--menu-item-color);
           font-size: 22px;
           font-family: 'Ubuntu', serif;
 
           &:hover {
-            color: #00ff54;
+            color: var(--brand-color);
           }
         }
       }
@@ -63,7 +63,7 @@
       height: 5px;
       width: 40px;
       margin-top: 5px;
-      background: #fff;
+      background: var(--menu-item-color);
       border-radius: 9px;
       transition: 0.25s ease-in-out;
       z-index: 100;
@@ -101,7 +101,7 @@
     position: absolute;
     height: 100vh;
     width: 100%;
-    background-color: #000;
+    background: var(--menu-bg);
     opacity: 0.9;
 
     & ul {
@@ -143,7 +143,7 @@
   position: fixed;
   height: 55px;
   width: 100%;
-  background-color: #1b1a1a;
+  background-color: var(--menu-bg);
   z-index: 1;
   opacity: 0;
 }

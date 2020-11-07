@@ -1,10 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap');
 
+:root {
+  --body-default-bg: #000;
+  --brand-color: #00ff54;
+  --menu-item-color: #fff;
+  --menu-bg: #0e0e0e;
+  --start-screen-text-color: #fff;
+  --section-title-color: #000;
+  --portfolio-bg: #f4f4f4;
+  --portfolio-text-color: #fff;
+  --services-bg: #fff;
+  --services-text-color: #000;
+  --footer-bg: #0e0e0e;
+  --footer-text-color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: #000;
+  background: var(--body-default-bg);
 }

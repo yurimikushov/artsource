@@ -25,7 +25,7 @@
       list-style: none;
       font-size: 25px;
       line-height: 1.4;
-      color: #fff;
+      color: var(--start-screen-text-color);
       text-transform: uppercase;
       font-family: 'Roboto', sans-serif;
 
@@ -33,7 +33,7 @@
         margin-top: 40px;
         margin-left: 20px;
         margin-right: 20px;
-        fill: #00ff54;
+        fill: var(--brand-color);
         height: 25px;
         width: 25px;
       }
@@ -111,7 +111,7 @@
     display: inline-block;
     height: 2px;
     width: 16px;
-    background: #dfdfdf;
+    background: var(--start-screen-text-color);
     margin: 0 -3px;
 
     &:nth-child(1) {
