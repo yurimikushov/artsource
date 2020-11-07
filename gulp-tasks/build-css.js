@@ -5,17 +5,14 @@ const concat = require('gulp-concat-css')
 const autoprefixer = require('gulp-autoprefixer')
 const shorthand = require('gulp-shorthand')
 const minify = require('gulp-clean-css')
-const sourcemaps = require('gulp-sourcemaps')
 
 module.exports = function buildCss() {
   return src('src/scss/*.scss')
     .pipe(cleanDir('build/css'))
-    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(concat('main.min.css'))
     .pipe(autoprefixer())
     .pipe(shorthand())
     .pipe(minify())
-    .pipe(sourcemaps.write())
     .pipe(dest('build/css'))
 }
