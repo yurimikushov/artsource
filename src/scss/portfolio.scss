@@ -1,6 +1,6 @@
 .portfolio {
   background: #f4f4f4;
-  
+
   .container {
     margin: auto;
     margin-top: 20px;
@@ -19,11 +19,6 @@
 
     @media screen and (max-width: 768px) {
       grid-gap: 20px;
-      grid-auto-rows: 400px;
-      grid-auto-columns: 400px;
-    }
-
-    @media screen and (max-width: 450px) {
       grid-auto-rows: 300px;
       grid-auto-columns: 300px;
     }
