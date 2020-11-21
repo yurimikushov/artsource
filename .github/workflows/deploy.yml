@@ -3,8 +3,12 @@ name: Deploy
 on:
   push:
     branches: [ main ]
+    paths:
+    - 'src/**'
   pull_request:
     branches: [ main ]
+    paths:
+    - 'src/**'
 
 jobs:
   deploy:
@@ -32,5 +36,5 @@ jobs:
         port: ${{ secrets.HOSTING_PORT }}
         username: ${{ secrets.HOSTING_USERNAME }}
         password: ${{ secrets.HOSTING_PASSWORD }}
-        source: "build"
+        source: 'build'
         target: ${{ secrets.HOSTING_TARGET }}      
