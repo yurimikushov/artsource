@@ -8,4 +8,4 @@ The project is open source and available under the [MIT License](LICENSE).
 
 # Preview
 
-![Preview](https://i.ibb.co/XFxctsW/preview.png)
+![Preview](docs/preview.png)
