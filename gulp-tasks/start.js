@@ -1,5 +1,6 @@
 const { series, watch, src } = require('gulp')
 const buildHtml = require('./build-html')
+const imageMin = require('./image-min')
 const buildImg = require('./build-img')
 const buildCss = require('./build-css')
 const buildJs = require('./build-js')
@@ -20,7 +21,7 @@ module.exports = () => {
   )
   watch(
     'src/images/**/*.{ico,png,jpg,svg,webp}',
-    series(buildImg, (callback) =>
+    series(imageMin, buildImg, buildHtml, (callback) =>
       src('build/images').pipe(server.stream()).on('end', callback)
     )
   )
