@@ -9,6 +9,8 @@ const data = require('./../src/data')
 const addBundleCssJs = (data) => {
   data['bundleCss'] = fs.readFileSync('./build/css/bundle.css')
   data['bundleJs'] = fs.readFileSync('./build/js/bundle.js')
+  fs.rmdirSync('./build/css', { recursive: true })
+  fs.rmdirSync('./build/js', { recursive: true })
   return data
 }
 
