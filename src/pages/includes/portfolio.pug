@@ -5,6 +5,6 @@ include portfolio-item-mixin.pug
     +section-title('Портфолио')
     .container
         each item, index in portfolio
-            +portfolio-item('portfolio-item-'+ (index + 1), item.linkToInstagram, item.image, item.discription)
+            +portfolio-item('portfolio-item-'+ (index + 1), item.instagram, item.src, item.discription)
     .view-more
         a(href='https://www.instagram.com/_artsource/' target='_blank') Посмотреть еще
