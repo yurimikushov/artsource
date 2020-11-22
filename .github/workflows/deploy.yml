@@ -5,6 +5,8 @@ when: &when
     - main
   paths: 
     - 'src/**'
+    - 'gulp-tasks/*.js'
+    - 'gulpfile.js'
 
 on:
   push: *when
