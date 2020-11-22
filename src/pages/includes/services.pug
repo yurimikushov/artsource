@@ -5,4 +5,4 @@ include services-item-mixin.pug
     +section-title('Услуги')
     .container
         each item, index in services
-            +services-item('services-item-'+ (index + 1), item.image, item.title, item.discription)
+            +services-item('services-item-'+ (index + 1), item.src, item.title, item.discription)

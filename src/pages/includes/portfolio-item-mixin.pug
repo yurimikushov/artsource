@@ -1,7 +1,7 @@
-mixin portfolio-item(className, linkToInstagram, image, discription)
+mixin portfolio-item(className, instagram, src, discription)
   .portfolio-item(class=className)
-    a(href=linkToInstagram target='_blank')
-        img(src=image alt=discription)
+    a(href=instagram target='_blank')
+        img(src=src alt=discription)
         .discription-container
             .discription
                 p
