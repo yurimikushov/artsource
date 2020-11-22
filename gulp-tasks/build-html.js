@@ -12,7 +12,7 @@ const addBundleCssJs = (data) => {
   return data
 }
 
-module.exports = function buildHtml() {
+module.exports = () => {
   return src('src/pages/*.pug')
     .pipe(
       cleanDir('build', {
