@@ -1,16 +1,14 @@
 name: Deploy
 
-when: &when
-  branches:
-    - main
-  paths: 
-    - 'src/**'
-    - 'gulp-tasks/*.js'
-    - 'gulpfile.js'
-
 on:
-  push: *when
-  pull_request: *when
+  pull_request:
+  push:
+    branches:
+      - main
+    paths: 
+      - 'src/**'
+      - 'gulp-tasks/*.js'
+      - 'gulpfile.js'
 
 jobs:
   deploy:
