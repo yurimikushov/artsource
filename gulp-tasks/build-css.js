@@ -10,7 +10,7 @@ module.exports = function buildCss() {
   return src('src/scss/*.scss')
     .pipe(cleanDir('build/css'))
     .pipe(sass())
-    .pipe(concat('main.min.css'))
+    .pipe(concat('bundle.css'))
     .pipe(autoprefixer())
     .pipe(shorthand())
     .pipe(minify())
