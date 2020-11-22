@@ -7,7 +7,7 @@ const minify = require('gulp-terser')
 module.exports = function buildJs() {
   return src('src/js/*.js')
     .pipe(cleanDir('build/js'))
-    .pipe(concat('main.min.js'))
+    .pipe(concat('bundle.js'))
     .pipe(
       babel({
         presets: ['@babel/env'],

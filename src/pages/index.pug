@@ -5,13 +5,11 @@ html(lang='ru')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title !{title}
     link(rel='shortcut icon' href='images/favicon.ico' type='image/x-icon')
-    style
-      include ../../build/css/main.min.css
+    style !{bundleCss}
   body
     include includes/menu
     include includes/start-screen
     include includes/portfolio
     include includes/services
     include includes/footer
-    script
-      include ../../build/js/main.min.js
+    script !{bundleJs}
