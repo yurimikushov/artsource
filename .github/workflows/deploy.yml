@@ -1,24 +1,22 @@
 name: Deploy
 
+when: &when
+  branches:
+    - main
+  paths: 
+    - 'src/**'
+
 on:
-  push:
-    branches: [ main ]
-    paths:
-    - 'src/**'
-  pull_request:
-    branches: [ main ]
-    paths:
-    - 'src/**'
+  push: *when
+  pull_request: *when
 
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [12.x]
-
+        node-version:
+          - 12.x
     steps:
     - uses: actions/checkout@main
     - name: Use Node.js ${{ matrix.node-version }}
