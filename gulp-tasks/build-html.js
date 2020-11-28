@@ -2,7 +2,6 @@ const { src, dest } = require('gulp')
 const cleanDir = require('gulp-clean-dir')
 const pug = require('gulp-pug')
 const htmlValidator = require('gulp-w3c-html-validator')
-const gulpHtmlBemValidator = require('gulp-html-bem-validator')
 const fs = require('fs')
 const data = require('./../src/data')
 
@@ -27,6 +26,5 @@ module.exports = function buildHtml() {
     )
     .pipe(pug({ data: addBundleCssJs(data) }))
     .pipe(htmlValidator())
-    .pipe(gulpHtmlBemValidator())
     .pipe(dest('build'))
 }
