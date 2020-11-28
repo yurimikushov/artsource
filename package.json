@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "imagemin": "gulp imagemin",
-    "build": "gulp build",
-    "start": "npm run build && gulp start"
+    "build": "cross-env NODE_ENV=prod gulp build",
+    "start": "cross-env NODE_ENV=dev gulp build && gulp start"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "browser-sync": "^2.26.13",
+    "cross-env": "^7.0.2",
     "fs": "0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
