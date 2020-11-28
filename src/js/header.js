@@ -1,49 +1,52 @@
-// Small screen menu
+// Small screen nav
 
-const menu = document.querySelector('.menu')
+const nav = document.querySelector('.nav')
+const burgerNavButton = document.querySelector('.burger-nav-button')
 
-const openSmallScreenMenu = () => {
-  menu.classList.add('is-open')
+const openSmallScreenNav = () => {
+  nav.classList.add('nav-is-open')
+  burgerNavButton.classList.add('burger-nav-button-is-open')
   document.body.setAttribute('style', 'overflow-y:hidden')
 }
 
-const closeSmallScreenMenu = () => {
-  menu.classList.remove('is-open')
+const closeSmallScreenNav = () => {
+  nav.classList.remove('nav-is-open')
+  burgerNavButton.classList.remove('burger-nav-button-is-open')
   document.body.setAttribute('style', 'overflow-y:scroll')
 }
 
-document.querySelector('.burger-menu').addEventListener('click', () => {
-  if (!menu.classList.contains('is-open')) {
-    openSmallScreenMenu()
+document.querySelector('.burger-nav-button').addEventListener('click', () => {
+  if (!nav.classList.contains('nav-is-open')) {
+    openSmallScreenNav()
   } else {
-    closeSmallScreenMenu()
+    closeSmallScreenNav()
   }
 })
 
-// Opacity menu background
+// Opacity nav background
 
-setOpacityToMenuBg()
+setOpacityTonavBg()
 
 window.addEventListener('scroll', function () {
-  setOpacityToMenuBg()
+  setOpacityTonavBg()
 })
 
-function setOpacityToMenuBg() {
+function setOpacityTonavBg() {
   const opacity =
-    pageYOffset / (portfolioStartPosition() - menuBackgroundHeight())
+    pageYOffset / (portfolioStartPosition() - navBackgroundHeight())
 
-  document.querySelector('.menu-background').style.opacity = opacity
+  document.querySelector('.header-background').style.opacity = opacity
 }
 
-function menuBackgroundHeight() {
-  return document.querySelector('.menu-background').offsetHeight
+function navBackgroundHeight() {
+  return document.querySelector('.header-background').offsetHeight
 }
 
 // Scroll to start
 
 document.querySelector('#to-start').addEventListener('click', () => {
   smoothScrollTo(0)
-  closeSmallScreenMenu()
+  closeSmallScreenNav()
 })
 
 // Scroll to portfolio
@@ -52,7 +55,7 @@ const scrollToContentBtn = document.querySelector('.scroll-to-portfolio-btn')
 
 scrollToContentBtn.addEventListener('click', () => {
   smoothScrollTo(portfolioStartPosition())
-  closeSmallScreenMenu()
+  closeSmallScreenNav()
 })
 
 function smoothScrollTo(top) {
@@ -64,21 +67,21 @@ function smoothScrollTo(top) {
 
 document.querySelector('#to-portfolio').addEventListener('click', () => {
   smoothScrollTo(portfolioStartPosition())
-  closeSmallScreenMenu()
+  closeSmallScreenNav()
 })
 
 // Scroll to services
 
 document.querySelector('#to-services').addEventListener('click', () => {
   smoothScrollTo(servicesStartPosition())
-  closeSmallScreenMenu()
+  closeSmallScreenNav()
 })
 
 // Scroll to contact
 
 document.querySelector('#to-footer').addEventListener('click', () => {
   smoothScrollTo(footerStartPosition())
-  closeSmallScreenMenu()
+  closeSmallScreenNav()
 })
 
 // Calculate blocks start positions

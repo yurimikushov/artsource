@@ -1,10 +1,10 @@
 include section-title-mixin.pug
 include portfolio-item-mixin.pug
 
-.portfolio
+section.portfolio
     +section-title('Портфолио')
-    .container
+    .portfolio-container
         each item, index in portfolio
             +portfolio-item('portfolio-item-'+ (index + 1), item.instagram, item.src, item.discription)
-    .view-more
+    .portfolio-view-more
         a(href='https://www.instagram.com/_artsource/' target='_blank') Посмотреть еще

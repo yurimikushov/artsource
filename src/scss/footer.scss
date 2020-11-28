@@ -1,7 +1,7 @@
-footer {
+.footer {
   background: var(--footer-bg);
 
-  & .container {
+  & .footer-container {
     width: 400px;
     margin: 0 auto;
     padding: 40px 0;
@@ -19,7 +19,7 @@ footer {
       display: inline-flex;
       list-style: none;
 
-      & li {
+      & .contact {
         margin: 0 15px;
 
         @media screen and (max-width: 500px) {
@@ -27,7 +27,7 @@ footer {
         }
 
         @media screen and (max-width: 350px) {
-          margin: 0 7px;
+          margin: 0 6px;
         }
 
         & a {
