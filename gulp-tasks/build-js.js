@@ -4,7 +4,7 @@ const concat = require('gulp-concat')
 const babel = require('gulp-babel')
 const minify = require('gulp-terser')
 
-module.exports = () => {
+module.exports = function buildJs() {
   return src('src/js/*.js')
     .pipe(cleanDir('build/js'))
     .pipe(concat('bundle.js'))

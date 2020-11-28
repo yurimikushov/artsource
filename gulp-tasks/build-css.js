@@ -6,7 +6,7 @@ const autoprefixer = require('gulp-autoprefixer')
 const shorthand = require('gulp-shorthand')
 const minify = require('gulp-clean-css')
 
-module.exports = () => {
+module.exports = function buildCss() {
   return src('src/scss/*.scss')
     .pipe(cleanDir('build/css'))
     .pipe(sass())
