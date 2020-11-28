@@ -9,27 +9,28 @@ const portfolio = require('./../src/data/portfolio')
 const services = require('./../src/data/services')
 const footer = require('./../src/data/footer')
 
-everyImageToBase64(portfolio)
-everyImageToBase64(services)
-everyImageToBase64(footer)
-
-let data = {}
-
-addToData(data, projectInfo)
-addToData(data, portfolio)
-addToData(data, services)
-addToData(data, footer)
-
-addBundleCssJsToData(data)
-
-deleteTempFiles()
-
 module.exports = function buildHtml() {
   return src('src/pages/*.pug')
     .pipe(cleanDir('build', { ext: ['.html'] }))
-    .pipe(pug({ data: data }))
+    .pipe(pug({ data: data() }))
     .pipe(htmlValidator())
     .pipe(dest('build'))
+}
+
+function data() {
+  everyImageToBase64(portfolio)
+  everyImageToBase64(services)
+  everyImageToBase64(footer)
+
+  const data = new ProjectDataBuilder()
+    .add(projectInfo)
+    .add(portfolio)
+    .add(services)
+    .add(footer)
+    .addBundleCssJs()
+    .toObject()
+
+  return data
 }
 
 function everyImageToBase64(data) {
@@ -38,20 +39,36 @@ function everyImageToBase64(data) {
   })
 }
 
-function addToData(data, info) {
-  for (let key in info) {
-    data[key] = info[key]
+class ProjectDataBuilder {
+  constructor() {
+    this.data = {}
   }
-}
 
-function addBundleCssJsToData(data) {
-  data['bundleCss'] = fs.readFileSync('./build/css/bundle.css')
-  data['bundleJs'] = fs.readFileSync('./build/js/bundle.js')
-}
+  add(data) {
+    for (let key in data) {
+      this.data[key] = data[key]
+    }
 
-function deleteTempFiles() {
-  if (process.env.NODE_ENV == 'prod') {
-    fs.rmdirSync('./build/css', { recursive: true })
-    fs.rmdirSync('./build/js', { recursive: true })
+    return this
+  }
+
+  addBundleCssJs() {
+    this.data['bundleCss'] = fs.readFileSync('./build/css/bundle.css')
+    this.data['bundleJs'] = fs.readFileSync('./build/js/bundle.js')
+
+    this._deleteTempFiles()
+
+    return this
+  }
+
+  toObject() {
+    return this.data
+  }
+
+  _deleteTempFiles() {
+    if (process.env.NODE_ENV == 'prod') {
+      fs.rmdirSync('./build/css', { recursive: true })
+      fs.rmdirSync('./build/js', { recursive: true })
+    }
   }
 }
