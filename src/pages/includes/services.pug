@@ -1,8 +1,8 @@
 include section-title-mixin.pug
 include services-item-mixin.pug
 
-.services
+section.services
     +section-title('Услуги')
-    .container
+    .services-container
         each item, index in services
             +services-item('services-item-'+ (index + 1), item.src, item.title, item.discription)

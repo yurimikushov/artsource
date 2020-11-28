@@ -7,7 +7,7 @@
   background-attachment: fixed;
   background-size: cover;
 
-  & .container {
+  & .start-screen-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,12 +15,12 @@
     width: 100%;
     text-align: center;
 
-    & img {
+    & .start-screen-logo {
       height: 145px;
       margin-bottom: 75px;
     }
 
-    & ul {
+    & .start-screen-items {
       display: inline-flex;
       list-style: none;
       font-size: 25px;
@@ -29,7 +29,7 @@
       text-transform: uppercase;
       font-family: 'Roboto', sans-serif;
 
-      & li svg {
+      & .start-screen-item svg {
         margin-top: 40px;
         margin-left: 20px;
         margin-right: 20px;
@@ -40,15 +40,15 @@
     }
 
     @media screen and (max-width: 1400px) {
-      & img {
+      & .start-screen-logo {
         height: 100px;
         margin-bottom: 50px;
       }
 
-      & ul {
+      & .start-screen-items {
         font-size: 18px;
 
-        & li svg {
+        & .start-screen-item svg {
           margin-top: 25px;
           height: 23px;
           width: 23px;
@@ -57,15 +57,15 @@
     }
 
     @media screen and (max-width: 960px) {
-      & img {
+      & .start-screen-logo {
         height: 70px;
         margin-bottom: 40px;
       }
 
-      & ul {
+      & .start-screen-items {
         font-size: 15px;
 
-        & li svg {
+        & .start-screen-item svg {
           margin-top: 20px;
           height: 20px;
           width: 20px;
@@ -74,15 +74,15 @@
     }
 
     @media screen and (max-width: 820px) {
-      & img {
+      & .start-screen-logo {
         display: none;
       }
 
-      & ul {
+      & .start-screen-items {
         display: block;
         font-size: 20px;
 
-        & li svg {
+        & .start-screen-item svg {
           margin: 15px 0;
         }
       }
