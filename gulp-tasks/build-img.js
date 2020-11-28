@@ -7,13 +7,10 @@ const convertedToBase64 = [
   'src/images/footer/**',
 ]
 
-module.exports = () => {
-  return (
-    src(
-      'src/images/**/*.{ico,png,jpg,svg,webp}',
-      { ignore: convertedToBase64 }
-    )
+module.exports = function buildImg() {
+  return src('src/images/**/*.{ico,png,jpg,svg,webp}', {
+    ignore: convertedToBase64,
+  })
     .pipe(cleanDir('build/images'))
     .pipe(dest('build/images'))
-  )
 }
