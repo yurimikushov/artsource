@@ -25,13 +25,13 @@ document.querySelector('.burger-nav-button').addEventListener('click', () => {
 
 // Opacity nav background
 
-setOpacityTonavBg()
+setOpacityToNavBg()
 
 window.addEventListener('scroll', function () {
-  setOpacityTonavBg()
+  setOpacityToNavBg()
 })
 
-function setOpacityTonavBg() {
+function setOpacityToNavBg() {
   const opacity =
     pageYOffset / (portfolioStartPosition() - navBackgroundHeight())
 
