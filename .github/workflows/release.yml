@@ -22,16 +22,21 @@ jobs:
       run: npm ci  
     - name: Build project
       run: npm run build
+    - name: Get tag name 
+      id: tag
+      uses: dawidd6/action-get-tag@v1
+    - name: Rename build dir
+      run: mv ./build ./${{ steps.tag.outputs.tag }}
     - name: Archive a build
-      run: zip ${{ github.ref }}.zip -r ./build
+      run: zip ${{ steps.tag.outputs.tag }}.zip -r ./${{ steps.tag.outputs.tag }}
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.ref }}
-        release_name: ${{ github.ref }}
+        tag_name: ${{ steps.tag.outputs.tag }}
+        release_name: ${{ steps.tag.outputs.tag }}
         draft: false
         prerelease: false
     - name: Upload Release Asset
@@ -41,6 +46,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./${{ github.ref }}.zip
-        asset_name: ${{ github.ref }}.zip
+        asset_path: ./${{ steps.tag.outputs.tag }}.zip
+        asset_name: ${{ steps.tag.outputs.tag }}.zip
         asset_content_type: application/zip
