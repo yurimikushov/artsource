@@ -3,10 +3,10 @@
 }
 
 @mixin transition($property) {
-    transition: $property .15s ease;
+  transition: $property 0.15s ease;
 }
 
-.portfolio-item {
+.portfolio__item {
   position: relative;
   @include border-radius;
   box-shadow: 0 0 30px 7px rgba(0, 0, 0, 0.15);
@@ -15,55 +15,49 @@
   &:hover {
     box-shadow: 0 0 40px 7px rgba(0, 0, 0, 0.25);
   }
+}
 
-  & a {
-    & img {
-      height: 100%;
-      width: 100%;
-      @include border-radius;
-    }
+.portfolio__item-img {
+  height: 100%;
+  width: 100%;
+  @include border-radius;
+}
 
-    & .discription-container {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      @include border-radius;
-      opacity: 0;
-      @include transition(opacity);
+.portfolio__item-popup {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  @include border-radius;
+  opacity: 0;
+  @include transition(opacity);
 
-      @media screen and (max-width: 768px) {
-        opacity: 1;
-      }
-
-      &:hover {
-        opacity: 1;
-      }
-
-      & .discription {
-        position: absolute;
-        bottom: 0;
-        background: linear-gradient(
-          180deg,
-          transparent 0,
-          rgba(0, 0, 0, 0.7) 70%
-        );
-        width: 100%;
-        height: 50%;
-        @include border-radius;
-        color: var(--portfolio-text-color);
-
-        & p {
-          position: absolute;
-          float: left;
-          font-family: 'Roboto', serif;
-          font-size: 15px;
-          bottom: 0;
-          margin-left: 20px;
-          margin-bottom: 20px;
-          line-height: 1.5;
-        }
-      }
-    }
+  @media screen and (max-width: 768px) {
+    opacity: 1;
   }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.portfolio__item-discription-container {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.7) 70%);
+  width: 100%;
+  height: 50%;
+  @include border-radius;
+  color: var(--portfolio-text-color);
+}
+
+.portfolio__item-discription {
+  position: absolute;
+  float: left;
+  font-family: 'Roboto', serif;
+  font-size: 15px;
+  bottom: 0;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
