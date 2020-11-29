@@ -1,7 +1,7 @@
 mixin services-item(className, src, title, discription)
-  .services-item(class=className)
-    img(src=src alt=title)
-    p.title=title
-    .discription
+  .services__item(class=className)
+    img.services__item-img(src=src alt=title)
+    p.services__item-title !{title}
+    .services__item-discription
         each item in discription
-            p !{item}
+            p.services__item-discription-line !{item}
