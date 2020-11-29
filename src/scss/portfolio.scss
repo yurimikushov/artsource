@@ -1,37 +1,37 @@
 .portfolio {
   background: var(--portfolio-bg);
+}
 
-  .portfolio-container {
-    margin: auto;
-    margin-top: 20px;
-    max-width: 1500px;
-    display: grid;
-    grid-gap: 30px;
-    grid-auto-rows: 140px;
-    grid-auto-columns: 140px;
-    justify-content: center;
+.portfolio__container {
+  margin: auto;
+  margin-top: 20px;
+  max-width: 1500px;
+  display: grid;
+  grid-gap: 30px;
+  grid-auto-rows: 140px;
+  grid-auto-columns: 140px;
+  justify-content: center;
 
-    @media screen and (max-width: 1350px) {
-      grid-gap: 25px;
-      grid-auto-rows: 120px;
-      grid-auto-columns: 120px;
-    }
+  @media screen and (max-width: 1350px) {
+    grid-gap: 25px;
+    grid-auto-rows: 120px;
+    grid-auto-columns: 120px;
+  }
 
-    @media screen and (max-width: 768px) {
-      grid-gap: 20px;
-      grid-auto-rows: 300px;
-      grid-auto-columns: 300px;
-    }
+  @media screen and (max-width: 768px) {
+    grid-gap: 20px;
+    grid-auto-rows: 300px;
+    grid-auto-columns: 300px;
+  }
 
-    @media screen and (max-width: 400px) {
-      grid-auto-rows: 250px;
-      grid-auto-columns: 250px;
-    }
+  @media screen and (max-width: 400px) {
+    grid-auto-rows: 250px;
+    grid-auto-columns: 250px;
+  }
 
-    @media screen and (max-width: 350px) {
-      grid-auto-rows: 200px;
-      grid-auto-columns: 200px;
-    }
+  @media screen and (max-width: 350px) {
+    grid-auto-rows: 200px;
+    grid-auto-columns: 200px;
   }
 }
 
@@ -43,7 +43,7 @@
     $grid-column: 1;
 
     @for $col from 1 through $colCount {
-      .portfolio-item-#{$item-count} {
+      .portfolio__item-#{$item-count} {
         justify-self: center;
         grid-column: #{$grid-column} / #{$grid-column + $itemSize};
         grid-row: #{$grid-row}/ #{$grid-row + $itemSize};
@@ -70,15 +70,14 @@
   @include displayItems(16, 1, 1);
 }
 
-.portfolio {
-  & .portfolio-view-more {
-    margin: 0 auto;
-    text-align: center;
-    padding: 30px 0;
-  
-    & a {
-      text-decoration: none;
-      color: #007bff;
-    }
-  }
+.portfolio__view-more {
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0;
+
+}
+
+.portfolio__view-more-link {
+  text-decoration: none;
+  color: #007bff;
 }
