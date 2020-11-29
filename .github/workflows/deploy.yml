@@ -34,5 +34,5 @@ jobs:
         port: ${{ secrets.HOSTING_PORT }}
         username: ${{ secrets.HOSTING_USERNAME }}
         password: ${{ secrets.HOSTING_PASSWORD }}
-        source: 'build/*'
+        source: 'build'
         target: ${{ secrets.HOSTING_TARGET }}      
