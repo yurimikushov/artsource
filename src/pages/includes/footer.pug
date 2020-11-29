@@ -1,9 +1,9 @@
 footer.footer
-    .footer-container
-        ul.contacts
+    .footer__container
+        ul.footer__contacts
             each item in footer
-                li.contact
-                    a(href=item.href target="_blank") 
-                        img(src=item.src alt=item.discription)
-        div.logo ARTSOURCE
-        div.copyright © Copyright 2020. Все права защищены.
+                li.footer__contact
+                    a.footer__contact-link(href=item.href target="_blank") 
+                        img.footer__contact-icon(src=item.src alt=item.discription)
+        div.footer__logo ARTSOURCE
+        div.footer__copyright © Copyright 2020. Все права защищены.
