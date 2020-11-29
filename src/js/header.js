@@ -51,7 +51,9 @@ document.querySelector('#to-start').addEventListener('click', () => {
 
 // Scroll to portfolio
 
-const scrollToContentBtn = document.querySelector('.scroll-to-portfolio-btn')
+const scrollToContentBtn = document.querySelector(
+  '.start-screen__scroll-to-portfolio-btn'
+)
 
 scrollToContentBtn.addEventListener('click', () => {
   smoothScrollTo(portfolioStartPosition())
