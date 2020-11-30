@@ -1,22 +1,22 @@
 // Small screen nav
 
 const nav = document.querySelector('.nav')
-const burgerNavButton = document.querySelector('.burger-nav-button')
+const burgerNavButton = document.querySelector('.burger-nav')
 
 const openSmallScreenNav = () => {
-  nav.classList.add('nav-is-open')
-  burgerNavButton.classList.add('burger-nav-button-is-open')
+  nav.classList.add('nav_open')
+  burgerNavButton.classList.add('burger-nav_open')
   document.body.setAttribute('style', 'overflow-y:hidden')
 }
 
 const closeSmallScreenNav = () => {
-  nav.classList.remove('nav-is-open')
-  burgerNavButton.classList.remove('burger-nav-button-is-open')
+  nav.classList.remove('nav_open')
+  burgerNavButton.classList.remove('burger-nav_open')
   document.body.setAttribute('style', 'overflow-y:scroll')
 }
 
-document.querySelector('.burger-nav-button').addEventListener('click', () => {
-  if (!nav.classList.contains('nav-is-open')) {
+burgerNavButton.addEventListener('click', () => {
+  if (!nav.classList.contains('nav_open')) {
     openSmallScreenNav()
   } else {
     closeSmallScreenNav()
@@ -35,11 +35,11 @@ function setOpacityToNavBg() {
   const opacity =
     pageYOffset / (portfolioStartPosition() - navBackgroundHeight())
 
-  document.querySelector('.header-background').style.opacity = opacity
+  document.querySelector('.header__background').style.opacity = opacity
 }
 
 function navBackgroundHeight() {
-  return document.querySelector('.header-background').offsetHeight
+  return document.querySelector('.header__background').offsetHeight
 }
 
 // Scroll to start
