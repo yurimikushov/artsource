@@ -1,10 +1,10 @@
-mixin portfolio-item(className, instagram, src, discription)
-  .portfolio__item(class=className)
+mixin portfolio-item(itemNumber, instagram, src, discription)
+  .portfolio__item(class='portfolio__item-' + itemNumber)
     a.portfolio__item-link(href=instagram target='_blank')
-        img.portfolio__item-img(src=src alt=discription)
-        .portfolio__item-popup
-            .portfolio__item-discription-container
-                p.portfolio__item-discription
-                    span ______ 
-                    <br>
-                    span !{discription}
+      img.portfolio__item-img(src=src alt=discription)
+      .portfolio__item-popup
+        .portfolio__item-discription-container
+          p.portfolio__item-discription
+            span ______
+            <br>
+            span !{discription}
