@@ -54,10 +54,18 @@
 .portfolio__item-discription {
   position: absolute;
   float: left;
+  margin-left: 6%;
+  margin-bottom: 6%;
+  bottom: 0;
   font-family: 'Roboto', serif;
   font-size: 15px;
-  bottom: 0;
-  margin-left: 20px;
-  margin-bottom: 20px;
   line-height: 1.5;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 13.5px;
+  }
 }
