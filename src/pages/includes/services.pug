@@ -3,6 +3,6 @@ include services-item-mixin.pug
 
 section.services
   +section-title('Услуги')
-  .services__container
+  .services__items
     each item, index in services
       +services-item(item.src, item.title, item.discription)

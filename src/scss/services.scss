@@ -2,7 +2,7 @@
   background: var(--services-bg);
 }
 
-.services__container {
+.services__items {
   display: grid;
   grid-template-columns: repeat(3, 350px);
   grid-template-rows: repeat(2, 350px);
