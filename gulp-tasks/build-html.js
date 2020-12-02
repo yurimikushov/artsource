@@ -18,9 +18,15 @@ module.exports = function buildHtml() {
 }
 
 function data() {
-  everyImageToBase64(portfolio)
-  everyImageToBase64(services)
-  everyImageToBase64(footer)
+  if (process.env.NODE_ENV == 'prod') {
+    everyImageToBase64(portfolio)
+    everyImageToBase64(services)
+    everyImageToBase64(footer)
+  } else {
+    correctEveryImageSrc(portfolio)
+    correctEveryImageSrc(services)
+    correctEveryImageSrc(footer)
+  }
 
   const data = new ProjectDataBuilder()
     .add(projectInfo)
@@ -36,6 +42,12 @@ function data() {
 function everyImageToBase64(data) {
   data[Object.keys(data)[0]].forEach((value) => {
     value.src = imageBase64.local(value.src)
+  })
+}
+
+function correctEveryImageSrc(data) {
+  data[Object.keys(data)[0]].forEach((value) => {
+    value.src = value.src.replace('./src', '')
   })
 }
 
