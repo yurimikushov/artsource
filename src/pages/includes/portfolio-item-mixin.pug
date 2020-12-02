@@ -1,5 +1,5 @@
-mixin portfolio-item(itemNumber, instagram, src, discription)
-  .portfolio__item(class='portfolio__item-' + itemNumber)
+mixin portfolio-item(instagram, src, discription)
+  .portfolio__item
     a.portfolio__item-link(href=instagram target='_blank')
       img.portfolio__item-img(src=src alt=discription)
       .portfolio__item-popup
