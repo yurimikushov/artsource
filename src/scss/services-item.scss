@@ -3,18 +3,14 @@
 }
 
 .services__item-img {
-  width: 120px;
+  width: 33%;
 }
 
 .services__item-title {
-  margin: 12px 5px 25px 5px;
+  margin: 12px 5px;
   font-family: 'Ubuntu', serif;
   font-size: 1.6em;
   color: var(--services-text-color);
-
-  @media (max-width: 300px) {
-    max-width: 250px;
-  }
 }
 
 .services__item-discription {
@@ -22,7 +18,6 @@
 }
 
 .services__item-discription-line {
-  max-width: 350px;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   line-height: 1.55;

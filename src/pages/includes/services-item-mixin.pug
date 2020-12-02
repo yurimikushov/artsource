@@ -1,5 +1,5 @@
-mixin services-item(itemNumber, src, title, discription)
-  .services__item(class='services__item-' + itemNumber)
+mixin services-item(src, title, discription)
+  .services__item
     img.services__item-img(src=src alt=title)
     p.services__item-title !{title}
     .services__item-discription
