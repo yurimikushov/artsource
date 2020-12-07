@@ -6,13 +6,13 @@ const burgerNavButton = document.querySelector('.burger-nav')
 const openSmallScreenNav = () => {
   nav.classList.add('nav_open')
   burgerNavButton.classList.add('burger-nav_open')
-  document.body.setAttribute('style', 'overflow-y:hidden')
+  document.body.style.overflowY = 'hidden'
 }
 
 const closeSmallScreenNav = () => {
   nav.classList.remove('nav_open')
   burgerNavButton.classList.remove('burger-nav_open')
-  document.body.setAttribute('style', 'overflow-y:scroll')
+  document.body.style.overflowY = ''
 }
 
 burgerNavButton.addEventListener('click', () => {
@@ -27,27 +27,31 @@ burgerNavButton.addEventListener('click', () => {
 
 setOpacityToNavBg()
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
   setOpacityToNavBg()
 })
 
 function setOpacityToNavBg() {
-  const opacity =
-    pageYOffset / (portfolioStartPosition() - navBackgroundHeight())
+  const portfolioStartPosition = document.querySelector('.start-screen').offsetHeight
+  const navBackgroundHeight = document.querySelector('.header__background').offsetHeight
+
+  const opacity = pageYOffset / (portfolioStartPosition - navBackgroundHeight)
 
   document.querySelector('.header__background').style.opacity = opacity
-}
-
-function navBackgroundHeight() {
-  return document.querySelector('.header__background').offsetHeight
 }
 
 // Scroll to start
 
 document.querySelector('#to-start').addEventListener('click', () => {
-  smoothScrollTo(0)
+  smoothScrollIntoView(document.querySelector('.start-screen'))
   closeSmallScreenNav()
 })
+
+function smoothScrollIntoView(elem) {
+  elem.scrollIntoView({
+    behavior: 'smooth',
+  })
+}
 
 // Scroll to portfolio
 
@@ -56,50 +60,25 @@ const scrollToContentBtn = document.querySelector(
 )
 
 scrollToContentBtn.addEventListener('click', () => {
-  smoothScrollTo(portfolioStartPosition())
+  smoothScrollIntoView(document.querySelector('.portfolio'))
   closeSmallScreenNav()
 })
 
-function smoothScrollTo(top) {
-  window.scrollTo({
-    top: top - 55,
-    behavior: 'smooth',
-  })
-}
-
 document.querySelector('#to-portfolio').addEventListener('click', () => {
-  smoothScrollTo(portfolioStartPosition())
+  smoothScrollIntoView(document.querySelector('.portfolio'))
   closeSmallScreenNav()
 })
 
 // Scroll to services
 
 document.querySelector('#to-services').addEventListener('click', () => {
-  smoothScrollTo(servicesStartPosition())
+  smoothScrollIntoView(document.querySelector('.services'))
   closeSmallScreenNav()
 })
 
 // Scroll to contact
 
 document.querySelector('#to-footer').addEventListener('click', () => {
-  smoothScrollTo(footerStartPosition())
+  smoothScrollIntoView(document.querySelector('.footer'))
   closeSmallScreenNav()
 })
-
-// Calculate blocks start positions
-
-function portfolioStartPosition() {
-  return document.querySelector('.start-screen').offsetHeight
-}
-
-function servicesStartPosition() {
-  return (
-    portfolioStartPosition() + document.querySelector('.portfolio').offsetHeight
-  )
-}
-
-function footerStartPosition() {
-  return (
-    servicesStartPosition() + document.querySelector('.services').offsetHeight
-  )
-}
