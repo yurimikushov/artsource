@@ -1,9 +1,9 @@
 .section-title {
   padding: 50px 0;
-  text-align: center;
+  color: var(--section-title-color);
   font-family: 'Ubuntu', serif;
   font-size: 42px;
-  color: var(--section-title-color);
+  text-align: center;
 
   @media screen and (max-width: 900px) {
     padding: 40px 0;

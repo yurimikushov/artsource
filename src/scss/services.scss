@@ -1,29 +1,29 @@
 .services {
   background: var(--services-bg);
-}
 
-.services__items {
-  display: grid;
-  grid-template-columns: repeat(3, 350px);
-  grid-template-rows: repeat(2, 350px);
-  margin: 20px auto 0;
-  max-width: 1500px;
-  justify-content: center;
-  font-size: 18px;
+  &__items {
+    display: grid;
+    max-width: 1500px;
+    justify-content: center;
+    margin: 20px auto 0;
+    font-size: 18px;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 350px);
 
-  @media screen and (max-width: 1100px) {
-    grid-template-columns: repeat(2, 350px);
-    grid-template-rows: repeat(3, 350px);
-  }
+    @media screen and (max-width: 1100px) {
+      grid-template-columns: repeat(2, 350px);
+      grid-template-rows: repeat(3, 350px);
+    }
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(1, 340px);
-    grid-template-rows: repeat(6, 340px);
-  }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 340px);
+      grid-template-rows: repeat(6, 340px);
+    }
 
-  @media (max-width: 300px) {
-    grid-template-columns: repeat(1, 100%);
-    grid-template-rows: repeat(6, 280px);
-    font-size: 14px;
+    @media (max-width: 300px) {
+      font-size: 14px;
+      grid-template-columns: repeat(1, 100%);
+      grid-template-rows: repeat(6, 280px);
+    }
   }
 }

@@ -1,24 +1,26 @@
-.services__item {
-  text-align: center;
-}
+.services {
+  &__item {
+    text-align: center;
+  }
 
-.services__item-img {
-  width: 33%;
-}
+  &__item-img {
+    width: 33%;
+  }
 
-.services__item-title {
-  margin: 12px 5px;
-  font-family: 'Ubuntu', serif;
-  font-size: 1.6em;
-  color: var(--services-text-color);
-}
+  &__item-title {
+    margin: 12px 5px;
+    color: var(--services-text-color);
+    font-family: 'Ubuntu', serif;
+    font-size: 1.6em;
+  }
 
-.services__item-discription {
-  color: var(--services-text-color);
-}
+  &__item-discription {
+    color: var(--services-text-color);
+  }
 
-.services__item-discription-line {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
-  line-height: 1.55;
+  &__item-discription-line {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.55;
+  }
 }
