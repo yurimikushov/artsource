@@ -6,58 +6,63 @@
   transition: $property 0.15s ease;
 }
 
-.portfolio__item {
-  position: relative;
-  @include border-radius;
-  box-shadow: 0 0 30px 7px rgba(0, 0, 0, 0.15);
-  @include transition(box-shadow);
+.portfolio {
+  &__item {
+    @include border-radius;
+    @include transition(box-shadow);
 
-  &:hover {
+    position: relative;
+    box-shadow: 0 0 30px 7px rgba(0, 0, 0, 0.15);
+  }
+
+  &__item:hover {
     box-shadow: 0 0 40px 7px rgba(0, 0, 0, 0.25);
   }
-}
 
-.portfolio__item-img {
-  height: 100%;
-  width: 100%;
-  @include border-radius;
-}
+  &__item-img {
+    @include border-radius;
 
-.portfolio__item-popup {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  @include border-radius;
-  opacity: 0;
-  @include transition(opacity);
+    width: 100%;
+    height: 100%;
+  }
 
-  @media screen and (max-width: 768px) {
+  &__item-popup {
+    @include border-radius;
+    @include transition(opacity);
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    @media screen and (max-width: 768px) {
+      opacity: 1;
+    }
+  }
+
+  &__item-popup:hover {
     opacity: 1;
   }
 
-  &:hover {
-    opacity: 1;
-  }
-}
+  &__item-discription {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6%;
+    background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.7) 70%);
+    color: var(--portfolio-text-color);
+    font-family: 'Roboto', serif;
+    font-size: 15px;
+    line-height: 1.5;
 
-.portfolio__item-discription {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 6%;
-  box-sizing: border-box;
-  background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.7) 70%);
-  color: var(--portfolio-text-color);
-  font-family: 'Roboto', serif;
-  font-size: 15px;
-  line-height: 1.5;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
 
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 13.5px;
+    @media screen and (max-width: 400px) {
+      font-size: 13.5px;
+    }
   }
 }

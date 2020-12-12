@@ -1,55 +1,55 @@
 .portfolio {
   background: var(--portfolio-bg);
-}
 
-.portfolio__items {
-  display: grid;
-  grid-template-columns: repeat(4, 300px);
-  grid-template-rows: repeat(4, 300px);
-  grid-gap: 25px;
-  margin: 20px auto 0;
-  max-width: 1500px;
-  justify-content: center;
-
-  @media screen and (max-width: 1350px) {
-    grid-template-columns: repeat(4, 265px);
-    grid-template-rows: repeat(4, 265px);
+  &__items {
+    display: grid;
+    max-width: 1500px;
+    justify-content: center;
+    margin: 20px auto 0;
     grid-gap: 25px;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(4, 300px);
+
+    @media screen and (max-width: 1350px) {
+      grid-gap: 25px;
+      grid-template-columns: repeat(4, 265px);
+      grid-template-rows: repeat(4, 265px);
+    }
+
+    @media screen and (max-width: 1160px) {
+      grid-template-columns: repeat(3, 265px);
+      grid-template-rows: repeat(6, 265px);
+    }
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: repeat(2, 265px);
+      grid-template-rows: repeat(8, 265px);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-gap: 20px;
+      grid-template-columns: repeat(1, 265px);
+      grid-template-rows: repeat(16, 265px);
+    }
+
+    @media screen and (max-width: 400px) {
+      grid-template-columns: repeat(1, 250px);
+      grid-template-rows: repeat(16, 250px);
+    }
+
+    @media screen and (max-width: 350px) {
+      grid-template-columns: repeat(1, 200px);
+      grid-template-rows: repeat(16, 200px);
+    }
   }
 
-  @media screen and (max-width: 1160px) {
-    grid-template-columns: repeat(3, 265px);
-    grid-template-rows: repeat(6, 265px);
+  &__view-more {
+    padding: 30px 0;
+    text-align: center;
   }
 
-  @media screen and (max-width: 900px) {
-    grid-template-columns: repeat(2, 265px);
-    grid-template-rows: repeat(8, 265px);
+  &__view-more-link {
+    color: #007bff;
+    text-decoration: none;
   }
-
-  @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(1, 265px);
-    grid-template-rows: repeat(16, 265px);
-    grid-gap: 20px;
-  }
-
-  @media screen and (max-width: 400px) {
-    grid-template-columns: repeat(1, 250px);
-    grid-template-rows: repeat(16, 250px);
-  }
-
-  @media screen and (max-width: 350px) {
-    grid-template-columns: repeat(1, 200px);
-    grid-template-rows: repeat(16, 200px);
-  }
-}
-
-.portfolio__view-more {
-  padding: 30px 0;
-  text-align: center;
-}
-
-.portfolio__view-more-link {
-  text-decoration: none;
-  color: #007bff;
 }

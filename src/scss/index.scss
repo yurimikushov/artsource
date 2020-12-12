@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   --body-default-bg: #000;
   --brand-color: #00ff54;
@@ -13,11 +18,6 @@
   --services-text-color: #000;
   --footer-bg: #0e0e0e;
   --footer-text-color: #fff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
 }
 
 body {
