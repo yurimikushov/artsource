@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "stylelint": "stylelint \"**/*.scss\"",
     "imagemin": "gulp imagemin",
     "build": "cross-env NODE_ENV=prod gulp build",
     "start": "cross-env NODE_ENV=dev gulp build && gulp start"
@@ -42,6 +43,10 @@
     "gulp-w3c-html-validator": "^2.0.1",
     "image-base64": "^1.0.2",
     "node-sass": "^5.0.0",
-    "pug": "^3.0.0"
+    "pug": "^3.0.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
