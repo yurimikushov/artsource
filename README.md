@@ -6,4 +6,4 @@ My friend's landing page implemented on Pug, SCSS and JS. This project is built 
 
 # Preview
 
-![Preview](docs/preview.png)
+![Preview](docs/img/preview.png)
