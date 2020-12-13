@@ -10,4 +10,4 @@ The project is open source and available under the [MIT License](LICENSE).
 
 # Preview
 
-![Preview](docs/preview.png)
+![Preview](docs/img/preview.png)
