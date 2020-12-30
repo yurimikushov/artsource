@@ -35,11 +35,11 @@ npm run stylelint
 Runs the project in `development` mode
 
 ```
-npm start
+npm run start
 ```
 
 Builds the project for `production` to the `build` directory
 
 ```
-npm build
+npm run build
 ```
