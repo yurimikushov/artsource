@@ -10,6 +10,40 @@ My friend's landing page implemented on Pug, SCSS and JS. This project is built 
 
 To view the full landing page [follow link](docs/landing-page-view.md).
 
+# How to use it
+
+Installs the project
+
+```
+git clone https://github.com/yurimikushov/artsource.git
+cd artsource
+npm i
+```
+
+Minifies the image in the `src/images/**` directory
+
+```
+npm run imagemin
+```
+
+Checks a follow CSS and SCSS writing conventions
+
+```
+npm run stylelint
+```
+
+Runs the project in `development` mode
+
+```
+npm start
+```
+
+Builds the project for `production` to the `build` directory
+
+```
+npm build
+```
+
 # License
 
 The project is open source and available under the [MIT License](LICENSE).
