@@ -4,10 +4,12 @@
 
 My friend's landing page implemented on Pug, SCSS and JS. This project is built using Gulp task runner.
 
+![Preview](docs/img/preview.png)
+
+# Full view
+
+To view the full landing page [follow link](docs/landing-page-view.md).
+
 # License
 
 The project is open source and available under the [MIT License](LICENSE).
-
-# Preview
-
-![Preview](docs/img/preview.png)

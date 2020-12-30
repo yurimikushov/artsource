@@ -1,0 +1,1 @@
+![The full landing page view](img/landing-page-view.png)
