@@ -20,7 +20,7 @@ cd artsource
 npm i
 ```
 
-Minifies the image in the `src/images/**` directory
+Minifies a images in the `src/images/**` directory
 
 ```
 npm run imagemin
