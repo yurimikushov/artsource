@@ -1,3 +1,5 @@
+- const currentYear = new Date().getFullYear()
+
 footer.footer
   .footer__container
     ul.footer__contacts
@@ -6,4 +8,4 @@ footer.footer
           a.footer__contact-link(href=item.href target="_blank") 
             img.footer__contact-icon(src=item.src alt=item.discription)
     div.footer__logo !{title}
-    div.footer__copyright © Copyright 2020. Все права защищены.
+    div.footer__copyright © Copyright !{currentYear}. Все права защищены.
